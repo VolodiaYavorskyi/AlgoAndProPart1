@@ -1,18 +1,35 @@
 #include <stdio.h>
-#include <math.h>
 
-int main ()
+int main()
 {
-    double a, b, c;
- 
-    printf ("Input a:");
-    scanf ("%lf", &a);
-    printf ("Input b:");
-    scanf ("%lf", &b);
- 
-    c = ((a - b)*(a - b)*(a - b)*(a - b)-(pow(a, 4) - 4*pow(a, 3)*b))/ (6*pow(a, 2)*pow(b, 2) - 4*a*pow(b, 3) + pow(b, 4));
- 
-    printf ("Result: %lf\n", c);
- 
+    int a, b, c, m, n;
+    
+    printf("input n:");
+    scanf("%d", &n);
+    printf("input m:");
+    scanf("%d", &m);
+    
+    a = n++ * m;
+    
+    printf("%d++ * %d = %d \n", n, m, a);
+    
+    printf("input n:");    
+    scanf("%d", &n);
+    printf("input m:");
+    scanf("%d", &m);
+    
+    b = n++ <m;
+    
+    printf("%d++ < %d = %d \n", n, m, b);
+    
+    printf("input n:");
+    scanf("%d", &n);
+    printf("input m:");
+    scanf("%d", &m);
+    
+    c = n-- >m;
+    
+    printf("%d-- > %d = %d \n", n, m, c);
+    
     return 0;
 }
