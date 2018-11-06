@@ -13,7 +13,6 @@ int main()
     scanf("%d", &n);
     
     srand(time(0));
-    
     printf("A = ");
     for (int i = 0; i < n; i++)
     {
@@ -26,11 +25,9 @@ int main()
     printf("B = ");   
     for (int i = 0; i < n; i++)
     {
-        if(A[i] % 7 == 0 && A[i] != 0)
-            i++;       
-        B[k] = A[i];
-        if(i != n)
+        if (A[i] % 7)
         {
+            B[k] = A[i];
             printf("%d; ", B[k]);
             k++;
         }
@@ -39,22 +36,16 @@ int main()
     
     int p = 0;
     printf("C = ");
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i < k; i++, p++)
     {
-        if(B[i] % 2 == 0)
+        C[p] = B[i];
+        printf("%d; ", C[p]);
+        
+        if (B[i] % 2)
         {
-            C[p] = B[i];
-            printf("%d; ", C[p]);
-            p++;       
-        }
-        else
-        {
-            C[p] = B[i];
-            printf("%d; ", C[p]);
             p++;
             C[p] = 0;
-            printf("%d; ", C[p]);
-            p++;
+            printf("%d; ", C[p]);  
         }
     }
     printf("(0 after odd)\n");
